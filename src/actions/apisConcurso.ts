@@ -16,14 +16,19 @@ export async function registerFiles(formData: FormData) {
     console.log(formData)
 
     // Ejemplo de envío a una API externa
-    const response = await fetch(`${apiUrl}/register`, {
+    const response = await fetch(`${apiUrl}sendFiles`, {
         method: 'POST',
         headers: {
-            "Authorization": `Bearer ${API_TOKEN}`,
-            "Content-Type": 'application/json',
+            "Application-Authorization": `${API_TOKEN}`,
+            // "Content-Type": 'application/json',
+            "Accept": 'application/json',
         },
         body: formData,
     });
+
+    const resultado = await response.json();
+
+    console.log(resultado);
 
     if (!response.ok) {
         throw new Error('Error al enviar los datos');
@@ -42,61 +47,57 @@ export async function registerParticipant(formData: objUser) {
     console.log(formData)
 
     // Ejemplo de envío a una API externa
-    const response = await fetch(`${apiUrl}/register`, {
+    const response = await fetch(`${apiUrl}storeCliente`, {
         method: 'POST',
         headers: {
-            "Authorization": `Bearer ${API_TOKEN}`,
+            "Application-Authorization": `${API_TOKEN}`,
             "Content-Type": 'application/json',
+            "Accept": 'application/json',
         },
         body: JSON.stringify(
             formData
         ),
     });
 
-    if (!response.ok) {
-        throw new Error('Error al enviar los datos');
+    const resultado = await response.json();
+
+    console.log(resultado);
+
+    if (resultado.status === 'error') {
+        return resultado;
     }
 
-    return { success: true };
+    return resultado;
 }
 
 
 export async function checkDNI(formData: objUser) {
-    const tipo = formData.tipo_documento;
     const dni = formData.nro_documento;
-    const tyc = formData.tyc;
-    const tyc_vacaciones = formData.tyc_vacaciones;
-    const recibirInformacion = formData.recibirInformacion;
     const API_TOKEN = process.env.NEXTAUTH_SECRET; // Acceso a variable de entorno
     const apiUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
-    console.log(API_TOKEN);
+    // console.log(API_TOKEN);
     console.log(apiUrl);
-    console.log(dni);
+    // console.log(dni);
     if (!API_TOKEN) {
         throw new Error('API_TOKEN no está definido');
     }
 
     // Ejemplo de envío a una API externa
-    const response = await fetch(`${apiUrl}/verificar`, {
-        method: 'POST',
+    const response = await fetch(`${apiUrl}findCliente?nro_documento=${dni}`, {
+        method: 'GET',
         headers: {
-            "Authorization": `Bearer ${API_TOKEN}`,
+            "Application-Authorization": `${API_TOKEN}`,
             "Content-Type": 'application/json',
-        },
-        body: JSON.stringify(
-            {
-                "tipo_documento": tipo,
-                "nro_documento": dni,
-                "tyc": tyc,
-                "tyc_vacaciones": tyc_vacaciones,
-                "recibirInformacion": recibirInformacion,
-            }
-        ),
+            "Accept": 'application/json',
+        }
     });
+    const resultado = await response.json();
 
-    if (!response.ok) {
-        throw new Error('Error al enviar los datos');
+    console.log(resultado);
+
+    if (resultado.status === 'error') {
+        return resultado;
     }
 
-    return { success: true };
+    return resultado;
 }

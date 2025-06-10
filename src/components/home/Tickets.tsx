@@ -13,7 +13,7 @@ const Tickets = () => {
     const fileInputRef = useRef<HTMLInputElement>(null);
     const [images, setImages] = useState<objFiles[]>(initialTodo);
     const [uploading, setUploading] = useState(false);
-    const { updateIdForm, dni } = useContext(ParticiparContext)
+    const { updateIdForm, dni, movil } = useContext(ParticiparContext)
 
     // 👉 Abre el input al hacer clic en el botón
     const handleSelectFiles = () => {
@@ -44,19 +44,12 @@ const Tickets = () => {
 
         const formData = new FormData();
         images.forEach((img) => {
-            formData.append("files", img.file);
-            formData.append("dni", img.dni);
+            formData.append("files[]", img.file);
+            formData.append("dni[]", img.dni);
+            formData.append("telefono[]", movil);
         });
         console.log(images);
         console.log(formData);
-
-        // SOLO PARA PRUEBAS HASTA QUE SE HAGA LA INTEGRACION
-
-        updateIdForm(4);
-        setUploading(false);
-
-        return;
-        /* **************************** */
 
 
         try {

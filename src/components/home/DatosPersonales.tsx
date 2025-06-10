@@ -27,7 +27,7 @@ const DatosPersonales = () => {
     const [isLoading, setIsLoading] = useState(false);
     // const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
     const [error, setError] = useState("");
-    const { updateIdForm, updateDNI } = useContext(ParticiparContext)
+    const { updateIdForm, updateDNI, updateMovil } = useContext(ParticiparContext)
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setError("");
@@ -42,22 +42,21 @@ const DatosPersonales = () => {
                 return;
             }
 
-            // SOLO PARA PRUEBAS HASTA QUE SE HAGA LA INTEGRACION
-
-            updateIdForm(3);
-            setIsLoading(true);
-            setError('');
-            updateDNI(userTodo.nro_documento ?? "");
-            return;
-            /* **************************** */
-
             try {
                 const result = await registerParticipant(userTodo);
-                updateDNI(userTodo.nro_documento ?? "");
-                updateIdForm(3);
-                setIsLoading(true);
-                console.log(result);
-                setError('');
+                if (result.status === 'error') {
+                    setError(result.message);
+                    setIsLoading(false);
+                    return;
+                }
+                if (result.status === 'success') {
+                    updateIdForm(3);
+                    updateDNI(userTodo.nro_documento ?? "");
+                    updateMovil(userTodo.movil ?? "");
+                    setIsLoading(true);
+                    setError('');
+                    return;
+                }
             } catch {
                 setIsLoading(false);
                 setError('Ocurrió un error inesperado'); // fallback

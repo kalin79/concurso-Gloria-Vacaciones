@@ -18,7 +18,7 @@ const Documento = () => {
     const [isLoading, setIsLoading] = useState(false);
     // const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
     const [error, setError] = useState("");
-    const { updateIdForm, updateDNI } = useContext(ParticiparContext)
+    const { updateIdForm, updateDNI, updateMovil } = useContext(ParticiparContext)
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setError("");
@@ -34,28 +34,34 @@ const Documento = () => {
                 return;
             }
 
-            // SOLO PARA PRUEBAS HASTA QUE SE HAGA LA INTEGRACION
-
-            updateIdForm(2);
-            setIsLoading(true);
-            setError('');
-            updateDNI(userTodo.nro_documento ?? "");
-            return;
-            /* **************************** */
-
-
-            console.log(parsedData.data)
-
-
-
-
             try {
                 const result = await checkDNI(userTodo);
-                updateIdForm(2);
-                updateDNI(userTodo.nro_documento ?? "");
-                setIsLoading(true);
+
                 console.log(result);
-                setError('');
+                if (result.status === 'error') {
+                    setError(result.message);
+                    setIsLoading(false);
+                    return;
+                }
+                if (result.status === 'success') {
+                    if (result.data && Object.keys(result.data).length > 0) {
+                        updateIdForm(3);
+                        updateDNI(userTodo.nro_documento ?? "");
+                        console.log(result.data.telefono);
+                        updateMovil(result.data.telefono);
+                        setIsLoading(true);
+                        setError('');
+                        return;
+                    } else {
+                        updateIdForm(2);
+                        updateDNI(userTodo.nro_documento ?? "");
+                        setIsLoading(true);
+                        setError('');
+                        return;
+                    }
+
+                }
+
             } catch {
                 setIsLoading(false);
                 setError('Ocurrió un error inesperado'); // fallback
