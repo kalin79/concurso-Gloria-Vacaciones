@@ -177,7 +177,7 @@ const Documento = () => {
                                         </svg>
                                     )}
                                 </span>
-                                <span className={`checkboxLabel misti`}>Al enviar este formulario, usted acepta que <span className="bold">LECHE GLORIA SOCIEDAD ANONIMA - GLORIA S.A.</span> trate sus datos personales conforme a nuestra política de privacidad. Sus datos serán utilizados exclusivamente para el sorteo de la promoción, <span className="bold">Gloria Paga tus Vacaciones, vigente desde 27/06/25 hasta el 15/08/2025.</span> La cantidad de ganadores será uno por semana, <span className="bold">total de 8 ganadores</span></span>
+                                <span className={`checkboxLabel misti`}>Al enviar este formulario, usted acepta que <span className="bold">LECHE GLORIA SOCIEDAD ANONIMA - GLORIA S.A.</span> trate sus datos personales conforme a nuestra <a href="/politicas-de-privacidad" target="_blank">política de privacidad.</a> Sus datos serán utilizados exclusivamente para el sorteo de la promoción, <span className="bold">Gloria Paga tus Vacaciones, vigente desde 27/06/25 hasta el 15/08/2025.</span> La cantidad de ganadores será uno por semana, <span className="bold">total de 8 ganadores</span></span>
                             </label>
                         </div>
                         <div>
