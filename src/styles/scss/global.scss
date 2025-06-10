@@ -399,11 +399,17 @@ input[type="file"] {
     >div {
         &:nth-child(1) {
             flex-basis: 60%;
+            display: flex;
+            justify-content: center;
 
             img {
                 width: 100%;
                 height: auto;
-                object-fit: contain;
+                object-fit: cover;
+
+                @media screen and (min-width: 1400px) {
+                    width: 500px;
+                }
             }
         }
 

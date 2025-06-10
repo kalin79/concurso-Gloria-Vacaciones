@@ -15,6 +15,11 @@ const nextConfig: NextConfig = {
   sassOptions: {
     includePaths: ["./styles"],
   },
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '100mb',
+    },
+  },
 };
 
 export default nextConfig;

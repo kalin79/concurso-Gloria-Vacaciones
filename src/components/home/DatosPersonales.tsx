@@ -2,7 +2,8 @@
 import { useState, useContext } from "react";
 import { ParticiparContext } from '@/context/ParticiparProvider';
 import { registerParticipant } from '@/actions/apisConcurso';
-
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import { objUser } from "@/interfaces/user";
 import { registerSchema } from '@/lib/validators';
 import styles from '@/styles/scss/formulario.module.scss';
@@ -137,13 +138,24 @@ const DatosPersonales = () => {
                             />
                         </div>
                         <div>
-                            <input
-                                type="date"
-                                value={userTodo.fecha_cumple}
-                                name="fecha_cumple"
-                                placeholder="Día/Mes/Año"
-                                onChange={handleChange}
+                            <DatePicker
+                                placeholderText="Indicamos tu cumpleaños"
+                                className="mi-input" // tu clase CSS normal
+                                selected={userTodo.fecha_cumple ? new Date(userTodo.fecha_cumple) : null}
+                                onChange={(date: Date | null) =>
+                                    setUserTodo((prev) => ({
+                                        ...prev,
+                                        fecha_cumple: date ? date.toISOString().split("T")[0] : "",
+                                    }))
+                                }
+                                dateFormat="dd/MM/YYYY"
+                                locale="es"
+                                showMonthDropdown
+                                showYearDropdown
+                                dropdownMode="select"
+
                             />
+
                         </div>
                         <div>
                             <div className="customSelect">
