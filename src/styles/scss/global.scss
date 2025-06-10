@@ -395,12 +395,22 @@ input[type="file"] {
     display: flex;
     justify-content: flex-start;
     gap: 1rem;
+    flex-direction: column;
+
+    @media screen and (min-width: 992px) {
+        flex-direction: row;
+    }
 
     >div {
         &:nth-child(1) {
             flex-basis: 60%;
             display: flex;
             justify-content: center;
+            order: 2;
+
+            @media screen and (min-width: 992px) {
+                order: 1;
+            }
 
             img {
                 width: 100%;
@@ -415,26 +425,41 @@ input[type="file"] {
 
         &:nth-child(2) {
             box-sizing: border-box;
-            padding: 3rem 3rem 0;
+            padding: 0rem 3rem 0;
             flex-basis: 40%;
+            order: 1;
+
+            @media screen and (min-width: 992px) {
+                order: 2;
+                padding: 3rem 3rem 0;
+            }
 
             h2 {
-                font-size: 48px;
+                font-size: 38px;
                 font-weight: 600;
                 margin: 0;
                 text-align: center;
+
+                @media screen and (min-width: 992px) {
+                    font-size: 48px;
+                }
             }
 
             p {
-                font-size: 32px;
+                font-size: 18px;
                 font-weight: 600;
                 margin: 0;
                 text-align: center;
                 line-height: 1em;
+
+                @media screen and (min-width: 992px) {
+                    font-size: 32px;
+                }
             }
 
             button {
-                width: 396px;
+                width: 250px;
+                margin-bottom: 1.5rem;
                 height: 44px;
                 display: inline-block;
                 margin: 1rem auto 0;
@@ -446,6 +471,12 @@ input[type="file"] {
                 border-radius: 10px;
                 color: white;
                 border: 0;
+
+                @media screen and (min-width: 992px) {
+                    width: 396px;
+                    height: 44px;
+                    margin-bottom: 0rem;
+                }
             }
         }
     }

@@ -1,6 +1,6 @@
 'use client';
 export default function Ganadores() {
-    const ganador1 = true;
+    const ganador1 = false;
     const ganador2 = false;
     const ganador3 = false;
     const ganador4 = false;
