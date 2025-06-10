@@ -171,7 +171,7 @@ const DatosPersonales = () => {
                             />
                         </div>
                         <div>
-                            <div className="customSelect">
+                            {/* <div className="customSelect">
                                 <select
                                     value={userTodo.departamento}
                                     name="departamento"
@@ -184,10 +184,19 @@ const DatosPersonales = () => {
                                     <option value="dni">Lima</option>
                                     <option value="ce">Jauja</option>
                                 </select>
+                            </div> */}
+                            <div>
+                                <input
+                                    type="text"
+                                    value={userTodo.departamento}
+                                    name="departamento"
+                                    placeholder="Ingresa tu departamento"
+                                    onChange={handleChange}
+                                />
                             </div>
                         </div>
                         <div>
-                            <div className="customSelect">
+                            {/* <div className="customSelect">
                                 <select
                                     value={userTodo.provincia}
                                     name="provincia"
@@ -200,10 +209,19 @@ const DatosPersonales = () => {
                                     <option value="dni">Lima</option>
                                     <option value="ce">Huacho</option>
                                 </select>
+                            </div> */}
+                            <div>
+                                <input
+                                    type="text"
+                                    value={userTodo.provincia}
+                                    name="provincia"
+                                    placeholder="Ingresa tu provincia"
+                                    onChange={handleChange}
+                                />
                             </div>
                         </div>
                         <div>
-                            <div className="customSelect">
+                            {/* <div className="customSelect">
                                 <select
                                     value={userTodo.distrito}
                                     name="distrito"
@@ -216,6 +234,15 @@ const DatosPersonales = () => {
                                     <option value="dni">San Miguel</option>
                                     <option value="ce">Callao</option>
                                 </select>
+                            </div> */}
+                            <div>
+                                <input
+                                    type="text"
+                                    value={userTodo.distrito}
+                                    name="distrito"
+                                    placeholder="Ingresa tu distrito"
+                                    onChange={handleChange}
+                                />
                             </div>
                         </div>
                         <div>
@@ -270,7 +297,7 @@ const DatosPersonales = () => {
                                         </svg>
                                     )}
                                 </span>
-                                <span className={`checkboxLabel`}>Acepto los <a href="/legales/terminos-y-condiciones" target="_blank">Términos y Condiciones,</a></span>
+                                <span className={`checkboxLabel`}>Acepto los <a href="/terminos-y-condiciones" target="_blank">Términos y Condiciones,</a></span>
                             </label>
                         </div>
                         <div>
