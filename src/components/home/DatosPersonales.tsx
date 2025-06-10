@@ -112,7 +112,7 @@ const DatosPersonales = () => {
     return (
         <div>
             <div className="titularContainer">
-                <h2 className="misti ">Registrate</h2>
+                <h2 className="misti ">Regístrate</h2>
                 <p className="misti">Completa tus datos para participar</p>
             </div>
             <form onSubmit={handleSubmit}>
