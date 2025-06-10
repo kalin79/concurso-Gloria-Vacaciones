@@ -194,7 +194,7 @@ const Documento = () => {
                                         </svg>
                                     )}
                                 </span>
-                                <span className={`checkboxLabel`}>Acepto los <a href="/legales/terminos-y-condiciones" target="_blank">Términos y Condiciones,</a></span>
+                                <span className={`checkboxLabel`}>Acepto los <a href="/terminos-y-condiciones" target="_blank">Términos y Condiciones,</a></span>
                             </label>
                         </div>
                         <div>
