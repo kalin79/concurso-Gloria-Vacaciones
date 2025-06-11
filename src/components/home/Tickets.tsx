@@ -90,8 +90,8 @@ const Tickets = () => {
     return (
         <div>
             <div className="titularContainer">
-                <h2 className="misti ">Registrar tus tickets</h2>
-                <p className="misti">Sube tu ticket de compra (físico o digital)</p>
+                <h2 className="misti ">¡Registra tus tickets!</h2>
+                <p className="misti">¡Ya estás a un paso de ganar! Sube tu ticket de compra (físico o digital) y entra al sorteo.</p>
             </div>
             <form onSubmit={handleSubmit}>
                 <div className={styles.gridContainer}>
@@ -117,7 +117,17 @@ const Tickets = () => {
                             </button>
                         </div>
                         <div>
-                            <p className="misti">Los formatos acetados: JPG, PNG. Peso máximo 10mb, se aceptan máximo 5 archivos.</p>
+                            <div className="anuncioContent">
+                                <h3>Sube una imagen clara y de buena calidad.</h3>
+                                <ul>
+                                    <li>
+                                        <p>Asegúrate de que esté bien iluminada, sin sombras, sin filtros ni efectos. La imagen debe mostrar el contenido de forma nítida y natural.</p>
+                                    </li>
+                                    <li>
+                                        <p>Los formatos acetados: JPG, PNG. Peso máximo 10mb, se aceptan máximo 5 archivos.</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div>
                             {images.length > 0 && (

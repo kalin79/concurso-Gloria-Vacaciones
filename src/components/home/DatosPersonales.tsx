@@ -139,7 +139,7 @@ const DatosPersonales = () => {
                         </div>
                         <div>
                             <DatePicker
-                                placeholderText="Indicamos tu cumpleaños"
+                                placeholderText="Cumpleaños"
                                 className="mi-input" // tu clase CSS normal
                                 selected={userTodo.fecha_cumple ? new Date(userTodo.fecha_cumple) : null}
                                 onChange={(date: Date | null) =>
@@ -202,7 +202,7 @@ const DatosPersonales = () => {
                                     type="text"
                                     value={userTodo.departamento}
                                     name="departamento"
-                                    placeholder="Ingresa tu departamento"
+                                    placeholder="Departamento"
                                     onChange={handleChange}
                                 />
                             </div>
@@ -227,7 +227,7 @@ const DatosPersonales = () => {
                                     type="text"
                                     value={userTodo.provincia}
                                     name="provincia"
-                                    placeholder="Ingresa tu provincia"
+                                    placeholder="Provincia"
                                     onChange={handleChange}
                                 />
                             </div>
@@ -252,7 +252,7 @@ const DatosPersonales = () => {
                                     type="text"
                                     value={userTodo.distrito}
                                     name="distrito"
-                                    placeholder="Ingresa tu distrito"
+                                    placeholder="Distrito"
                                     onChange={handleChange}
                                 />
                             </div>
@@ -292,7 +292,7 @@ const DatosPersonales = () => {
                                         </svg>
                                     )}
                                 </span>
-                                <span className={`checkboxLabel misti`}>Al enviar este formulario, usted acepta que <span className="bold">LECHE GLORIA SOCIEDAD ANONIMA - GLORIA S.A.</span> trate sus datos personales conforme a nuestra <a href="/politicas-de-privacidad" target="_blank">política de privacidad.</a> Sus datos serán utilizados exclusivamente para el sorteo de la promoción, <span className="bold">Gloria Paga tus Vacaciones, vigente desde 27/06/25 hasta el 15/08/2025.</span> La cantidad de ganadores será uno por semana, <span className="bold">total de 8 ganadores</span></span>
+                                <span className={`checkboxLabel misti`}>Al enviar este formulario, acepto que <span className="bold">LECHE GLORIA SOCIEDAD ANONIMA - GLORIA S.A.</span> trate sus datos personales conforme a nuestra política de privacidad. Sus datos serán utilizados exclusivamente para el sorteo de la promoción, <a href="/politicas-de-privacidad" target="_blank">política de privacidad.</a> <span className="bold">Gloria Paga tus Vacaciones, vigente desde 27/06/25 hasta el 15/08/2025. </span> Habrá un <span className="bold">ganador por semana, serán 8 ganadores en total.</span></span>
                             </label>
                         </div>
                         <div>
@@ -326,7 +326,7 @@ const DatosPersonales = () => {
                                         </svg>
                                     )}
                                 </span>
-                                <span className={`checkboxLabel`}>Desea recibir informaci&oacute;n</span>
+                                <span className={`checkboxLabel`}>Deseo recibir más información de productos y promociones.</span>
                             </label>
                         </div>
                         <div>

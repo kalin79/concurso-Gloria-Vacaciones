@@ -5,7 +5,7 @@ export default function Fechas() {
         <div className="contenidoGeneral">
             <div className="container">
                 <div className="headerTitularContainer">
-                    <h1>Fecha de los sorteos</h1>
+                    <h1>¡Conoce las fechas de los sorteos!</h1>
                 </div>
                 <div className="gridSorteos">
                     <div className="item">

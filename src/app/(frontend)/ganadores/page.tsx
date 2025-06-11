@@ -12,7 +12,7 @@ export default function Ganadores() {
         <div className="contenidoGeneral">
             <div className="container">
                 <div className="headerTitularContainer">
-                    <h1>Fecha de los sorteos</h1>
+                    <h1>Nuestros ganadores</h1>
                 </div>
                 <div className="gridSorteos">
                     <div className={`item centerAlign ${!ganador1 ? 'bgGris' : ''} `}>
@@ -28,7 +28,7 @@ export default function Ganadores() {
                                 </>
                             ) : (
                                 <div>
-                                    <h5 className='boldTexto'>Proximo sorteo 27 de JUNIO</h5>
+                                    <h5 className='boldTexto'>Próximo sorteo 27 de JUNIO</h5>
 
                                 </div>
                             )
@@ -48,7 +48,7 @@ export default function Ganadores() {
                                 </div>
                             ) : (
                                 <div>
-                                    <h5 className='boldTexto'>Proximo sorteo 04 de JULIO</h5>
+                                    <h5 className='boldTexto'>Próximo sorteo 04 de JULIO</h5>
 
                                 </div>
                             )
@@ -68,7 +68,7 @@ export default function Ganadores() {
                                 </div>
                             ) : (
                                 <div>
-                                    <h5 className='boldTexto'>Proximo sorteo 11 de JULIO</h5>
+                                    <h5 className='boldTexto'>Próximo sorteo 11 de JULIO</h5>
 
                                 </div>
                             )
@@ -88,7 +88,7 @@ export default function Ganadores() {
                                 </div>
                             ) : (
                                 <div>
-                                    <h5 className='boldTexto'>Proximo sorteo 18 de JULIO</h5>
+                                    <h5 className='boldTexto'>Próximo sorteo 18 de JULIO</h5>
 
                                 </div>
                             )
@@ -108,7 +108,7 @@ export default function Ganadores() {
                                 </div>
                             ) : (
                                 <div>
-                                    <h5 className='boldTexto'>Proximo sorteo 25 de JULIO</h5>
+                                    <h5 className='boldTexto'>Próximo sorteo 25 de JULIO</h5>
 
                                 </div>
                             )
@@ -128,7 +128,7 @@ export default function Ganadores() {
                                 </div>
                             ) : (
                                 <div>
-                                    <h5 className='boldTexto'>Proximo sorteo 01 de AGOSTO</h5>
+                                    <h5 className='boldTexto'>Próximo sorteo 01 de AGOSTO</h5>
 
                                 </div>
                             )
@@ -148,7 +148,7 @@ export default function Ganadores() {
                                 </div>
                             ) : (
                                 <div>
-                                    <h5 className='boldTexto'>Proximo sorteo 08 de AGOSTO</h5>
+                                    <h5 className='boldTexto'>Próximo sorteo 08 de AGOSTO</h5>
 
                                 </div>
                             )
@@ -168,7 +168,7 @@ export default function Ganadores() {
                                 </div>
                             ) : (
                                 <div>
-                                    <h5 className='boldTexto'>Proximo sorteo 15 de AGOSTO</h5>
+                                    <h5 className='boldTexto'>Próximo sorteo 15 de AGOSTO</h5>
 
                                 </div>
                             )

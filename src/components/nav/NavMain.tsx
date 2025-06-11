@@ -31,7 +31,7 @@ const NavMain = () => {
                 </div>
                 <nav>
                     <Link href="/" onClick={() => setIsOpen(false)}>Inicio</Link>
-                    <Link href="/como-participar" onClick={() => setIsOpen(false)}>Como Participar</Link>
+                    <Link href="/como-participar" onClick={() => setIsOpen(false)}>¿Cómo participar?</Link>
                     <Link href="/ganadores" onClick={() => setIsOpen(false)}>Ganadores</Link>
                     <Link href="/politicas-de-privacidad" onClick={() => setIsOpen(false)}>Políticas y privacidad</Link>
                     <Link href="/terminos-y-condiciones" onClick={() => setIsOpen(false)}>Términos y condiciones</Link>
