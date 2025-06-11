@@ -30,7 +30,7 @@ export default function Fechas() {
                                     Promoción exclusiva en:
                                 </p>
                                 <div className='logosContainer'>
-                                    <Image src="/plaza.svg" width={116} height={43} alt='' />
+                                    <Image src="/plaza.png" width={116} height={43} alt='' />
                                     <Image src="/vivanda.svg" width={139} height={42} alt='' />
                                 </div>
                             </div>
