@@ -1,6 +1,7 @@
 
 
 import type { Metadata, Viewport } from "next";
+import { GTM, GTMNoScript } from '@/components/GTM';
 import ParticiparProvider from '@/context/ParticiparProvider'
 
 
@@ -44,7 +45,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="es" className={`${misti.variable}`}>
+            <head />
             <body>
+                <GTM />
+                <GTMNoScript />
                 <ParticiparProvider>
                     <div className="bgCielo">
                         <div className='container'>
