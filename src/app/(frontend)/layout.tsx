@@ -2,6 +2,7 @@
 
 import type { Metadata, Viewport } from "next";
 import { GTM, GTMNoScript } from '@/components/GTM';
+import CookieBanner from '@/components/CookieBanner';
 import ParticiparProvider from '@/context/ParticiparProvider'
 
 
@@ -65,6 +66,7 @@ export default function RootLayout({
                         </div>
                     </div>
                 </ParticiparProvider>
+                <CookieBanner />
             </body>
         </html>
     );
