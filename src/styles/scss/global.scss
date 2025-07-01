@@ -180,7 +180,9 @@ button[type=submit] {
     position: absolute;
     top: -11.5rem;
     z-index: 4;
-    width: 100%;
+    // width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 
     @media screen and (min-width: 992px) {
         top: -19.5rem;
