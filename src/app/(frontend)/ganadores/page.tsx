@@ -19,12 +19,12 @@ export default function Ganadores() {
                         {
                             (ganador1) ? (
                                 <>
-                                    <h4>1er Sorteo: viernes 27 de junio del año 2025</h4>
+                                    <h4>1er Sorteo: viernes 27 de junio</h4>
                                     <h5>RUDDY</h5>
                                     <p>DNI: 47502096</p>
-                                    <p>Los olivos </p>
+                                    <p>Los Olivos </p>
                                     <div className='montoContent'>S/5,000.00</div>
-                                    <span>Cinco mil nuevos, soles</span>
+                                    <span>Cinco mil nuevos soles</span>
                                 </>
                             ) : (
                                 <div>
