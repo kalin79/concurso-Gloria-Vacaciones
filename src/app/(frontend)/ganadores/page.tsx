@@ -1,7 +1,7 @@
 'use client';
 export default function Ganadores() {
     const ganador1 = true;
-    const ganador2 = false;
+    const ganador2 = true;
     const ganador3 = false;
     const ganador4 = false;
     const ganador5 = false;
@@ -39,12 +39,12 @@ export default function Ganadores() {
                         {
                             (ganador2) ? (
                                 <div>
-                                    <h4>1er Sorteo: viernes 27 de junio del año 2025</h4>
-                                    <h5>ELVIS</h5>
-                                    <p>DNI: 12345678</p>
-                                    <p>San Juan de Lurigancho </p>
-                                    <div className='montoContent'>S/3000.00</div>
-                                    <span>Tres mil nuevos, soles</span>
+                                    <h4>1er Sorteo: viernes 27 de junio</h4>
+                                    <h5>Berenda Katia</h5>
+                                    <p>DNI: 08137321</p>
+                                    <p>Rimac</p>
+                                    <div className='montoContent'>S/5,000.00</div>
+                                    <span>Cinco mil nuevos soles</span>
                                 </div>
                             ) : (
                                 <div>
