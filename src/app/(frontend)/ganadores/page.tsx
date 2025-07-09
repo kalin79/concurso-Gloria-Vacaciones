@@ -39,7 +39,7 @@ export default function Ganadores() {
                         {
                             (ganador2) ? (
                                 <div>
-                                    <h4>1er Sorteo: viernes 27 de junio</h4>
+                                    <h4>2do Sorteo: 04 de julio</h4>
                                     <h5>Berenda Katia</h5>
                                     <p>DNI: 08137321</p>
                                     <p>Rimac</p>
