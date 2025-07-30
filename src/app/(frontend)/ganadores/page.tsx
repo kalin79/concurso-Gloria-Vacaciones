@@ -4,7 +4,7 @@ export default function Ganadores() {
     const ganador2 = true;
     const ganador3 = true;
     const ganador4 = true;
-    const ganador5 = false;
+    const ganador5 = true;
     const ganador6 = false;
     const ganador7 = false;
     const ganador8 = false;
@@ -63,7 +63,7 @@ export default function Ganadores() {
                                     <h5>Laura</h5>
                                     <p>DNI: 18207096</p>
                                     <p>Puente piedra</p>
-                                    <div className='montoContent'>S/5000.00</div>
+                                    <div className='montoContent'>S/5,000.00</div>
                                     <span>Cinco mil nuevos soles</span>
                                 </div>
                             ) : (
@@ -83,7 +83,7 @@ export default function Ganadores() {
                                     <h5>Sandy del Rosario</h5>
                                     <p>DNI: 80091982</p>
                                     <p>Ventanilla </p>
-                                    <div className='montoContent'>S/5000.00</div>
+                                    <div className='montoContent'>S/5,000.00</div>
                                     <span>Cinco mil nuevos soles</span>
                                 </div>
                             ) : (
@@ -99,12 +99,12 @@ export default function Ganadores() {
                         {
                             (ganador5) ? (
                                 <div>
-                                    <h4>1er Sorteo: viernes 27 de junio del año 2025</h4>
-                                    <h5>ELVIS</h5>
-                                    <p>DNI: 12345678</p>
-                                    <p>San Juan de Lurigancho </p>
-                                    <div className='montoContent'>S/3000.00</div>
-                                    <span>Tres mil nuevos, soles</span>
+                                    <h4>5to Sorteo: 25 de julio</h4>
+                                    <h5>Mirian</h5>
+                                    <p>DNI: 40082862</p>
+                                    <p>Ate Vitarte</p>
+                                    <div className='montoContent'>S/5,000.00</div>
+                                    <span>Cinco mil nuevos soles</span>
                                 </div>
                             ) : (
                                 <div>
