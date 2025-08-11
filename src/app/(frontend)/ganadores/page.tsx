@@ -6,7 +6,7 @@ export default function Ganadores() {
     const ganador4 = true;
     const ganador5 = true;
     const ganador6 = true;
-    const ganador7 = false;
+    const ganador7 = true;
     const ganador8 = false;
     return (
         <div className="contenidoGeneral">
@@ -139,12 +139,12 @@ export default function Ganadores() {
                         {
                             (ganador7) ? (
                                 <div>
-                                    <h4>1er Sorteo: viernes 27 de junio del año 2025</h4>
-                                    <h5>ELVIS</h5>
-                                    <p>DNI: 12345678</p>
-                                    <p>San Juan de Lurigancho </p>
-                                    <div className='montoContent'>S/3000.00</div>
-                                    <span>Tres mil nuevos, soles</span>
+                                    <h4>7mo Sorteo: 08 de agosto</h4>
+                                    <h5>MOISES</h5>
+                                    <p>DNI: 47423310</p>
+                                    <p>VILLA SALVADOR</p>
+                                    <div className='montoContent'>S/5,000.00</div>
+                                    <span>Cinco mil nuevos soles</span>
                                 </div>
                             ) : (
                                 <div>
